@@ -3,13 +3,16 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=testing jest --watchAll --verbose --runInBand --silent"
+    "test": "cross-env NODE_ENV=testing jest --watchAll --verbose --runInBand --silent",
+    "start":"node index.js",
+    "server":"nodemon index.js",
+    "migrate":"knex migrate:latest",
+    "rollback":"knex migrate:rollback"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/web-sprint-challenge-adding-data-persistence.git"
   },
-  "license": "ISC",
   "devDependencies": {
     "cross-env": "7.0.3",
     "eslint": "7.28.0",
